@@ -1,16 +1,20 @@
+<!-- Desktop nav-bar -->
 <div class="top">
     <div class="top__nav">
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#">Returns & Refunds</a></li>
-                <li class="nav__item"><a href="#">Warranty Information</a></li>
-                <li class="nav__item"><a href="#">Shipping & Delivery</a></li>
-                <li class="nav__item"><a href="#">Track Order</a></li>
+        <nav>
+            <ul class="top__nav__list">
+                <li class="top__nav__item"><a href="#">Returns & Refunds</a></li>
+                <li class="top__nav__item"><a href="#">Warranty Information</a></li>
+                <li class="top__nav__item"><a href="#">Shipping & Delivery</a></li>
+                <li class="top__nav__item"><a href="#">Track Order</a></li>
             </ul>
         </nav>
     </div>
     <div class="top__icons">
-        <img src="img/global/top_icons/X_logo_2023.svg" alt="">
+        <a href="https://x.com"><img class="x-icon" src="img/global/top_icons/X_logo_2023.svg" alt="x logo"></a>
+        <a href="https://www.youtube.com/"><img class="youtube" src="img/global/top_icons/youtube.svg" alt="youtube logo"></a>
+        <a href="https://facebook.com"><img class="facebook-icon" src="img/global/top_icons/facebook.svg" alt="facebook logo"></a>
+        <a href="https://web.telegram.org/k/"><img class="telegram-icon" src="img/global/top_icons/telegram.svg" alt="telegram logo"></a>
     </div>
 </div>
 <div class="top-header">
@@ -26,7 +30,7 @@
         </p>
     </div>
     <div class="top-header__block top-header__block--nav">
-        <nav class="nav">
+        <nav>
             <ul class="nav__list">
                 <li class="nav__item"><a href="#">Categories</a></li>
                 <li class="nav__item"><a href="#">Deals</a></li>
@@ -39,3 +43,49 @@
         </nav>
     </div>
 </div>
+
+<!-- Phone nav bar -->
+<div class="top__header">
+    <div class="top-header__block--logo">
+        <a href="index.html" class="logo">
+            <img class="logo__img" src="img/logo.svg" alt="logo">
+        </a>
+    </div>
+    <div><button class="burger-menu"><img src="img/global/top_icons/burger_menu.svg" alt="menu icon"></button></div>
+    <div class="top__header__nav-block">
+        <div class="top__nav">
+            <nav>
+                <ul class="top__nav__list">
+                    <li class="top__nav__item"><a href="#">Returns & Refunds</a></li>
+                    <li class="top__nav__item"><a href="#">Warranty Information</a></li>
+                    <li class="top__nav__item"><a href="#">Shipping & Delivery</a></li>
+                    <li class="top__nav__item"><a href="#">Track Order</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="top-header">
+            <nav>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#">Categories</a></li>
+                    <li class="nav__item"><a href="#">Deals</a></li>
+                    <li class="nav__item"><a href="#">Sale</a></li>
+                    <li class="nav__item"><a href="#">Partners</a></li>
+                    <li class="nav__item"><a href="#">News</a></li>
+                    <li class="nav__item"><a href="#">About Us</a></li>
+                    <li class="nav__item"><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script>
+
+    const burgerMenu = document.querySelector('.burger-menu');
+    const navBlock = document.querySelector('.top__header__nav-block');
+
+
+    burgerMenu.addEventListener('click', () => {
+        navBlock.style.display = (navBlock.style.display === 'none' || navBlock.style.display === '') ? 'flex' : 'none';
+    });
+
+</script>
