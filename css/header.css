@@ -11,7 +11,7 @@
 }
 .top__nav {
     width: 50%;
-    min-width: 895px; /* ✅ Мінімальна ширина, щоб не зникали */
+    min-width: 895px; 
     flex-grow: 0.2;
 }
 .top__nav__list {
@@ -35,12 +35,12 @@
 }
 
 .top__icons {
-    width: auto; /* ✅ Дозволяє займати рівно стільки місця, скільки потрібно */
+    width: auto; 
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    flex-shrink: 0; /* ✅ Не дає блоку стискатися */
+    flex-shrink: 0; 
 }
 .x-icon{
     width: 30px;
@@ -118,7 +118,10 @@
     .top {
         display: none;
     }
-    .top__header {
+    .top-header{
+        display: none;
+    }
+    .phone__top__header {
         display: flex;
         width: 100%;
         height: 120px;
@@ -126,58 +129,94 @@
         align-items: center; 
         justify-content: space-between; 
         padding: 0 20px;
-        position: fixed; /* Фіксуємо хедер */
-        top: 0;
-        left: 0;
-        z-index: 1000; /* Забезпечує, щоб хедер залишався на передньому плані */
+        
     }
 
-    .burger-menu {
-        all: unset; 
+    .phone__top__header__nav-block {
+        position: fixed;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-height: calc(100vh - 120px); /* Вся висота екрану */
+        background-color: rgb(39, 39, 39);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 20px;
+        overflow-y: auto;
+        z-index: 1000;
+    }
+    
+    .phone__top__header__nav-block.active {
+        display: flex;
+    }
+    
+    
+    #burger-menu {
         background: transparent; 
         border: none; 
         padding: 0; 
         cursor: pointer; 
     }
 
-    .top__header__nav-block {
-        position: fixed;
-        display: none;
-        top: 120px; /* Встановлюємо відстань від верхньої частини, щоб меню було під хедером */
-        left: 0;
-        width: 100%;
-        height: calc(100% - 120px); /* Робимо висоту меню, щоб воно заповнювало решту екрану */
-        background: rgb(39, 39, 39);/* Темний фон */
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        z-index: 999; /* Переконатися, що меню під хедером, але все одно на передньому плані */
-    }
-    .top__nav__list {
-        list-style: none;
-        padding-bottom: 10px;
-        margin: 0;
-        align-items: center;
-        justify-content: center;
-    }
-    .nav__list {
+    .phone__top__nav__list {
         list-style: none;
         display: flex;
-        gap: 1%;
+        flex-direction: column; /* Встановлює вертикальне розташування */
+        align-items: center; /* Центрує по горизонталі */
+        justify-content: center; /* Центрує по вертикалі */
+        gap: 20px; /* Відстань між пунктами */
+        height: 100%; /* Заповнює весь доступний простір */
         padding: 0;
         margin: 0;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
+        margin-bottom: 40px;
+    } 
+    .phone__top__nav__list a{
+        color: rgb(218, 218, 218);
+        text-decoration: none;
+    }
+    .phone__nav__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column; /* Встановлює вертикальне розташування */
+        align-items: center; /* Центрує по горизонталі */
+        justify-content: center; /* Центрує по вертикалі */
+        gap: 20px; /* Відстань між пунктами */
+        height: 100%; /* Заповнює весь доступний простір */
+        padding: 0;
+        margin: 0;
+        text-align: center;
     }
     
-    .nav__item a {
-        text-decoration: underline;
+    .phone__nav__item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .phone__nav__item a {
+        display: block;
+        text-decoration: none;
         color: rgb(187, 187, 187);
         font-size: 24px;
+        font-weight: bold;
         padding: 10px 15px;
         transition: color 0.3s ease;
-        white-space: nowrap;
-        font-weight: bold;
+    }
+    
+    .phone__nav__item a:hover {
+        color: #ff6600;
+    }
+    .phone__icons{
+        width: auto; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-shrink: 0;
+        padding: 15px;
     }
 }
 
@@ -186,9 +225,11 @@
 
 
 
-@media (min-width: 1286px) {
+@media (min-width: 1285px) {
     .phone__top__header{
         display: none;
     }
-    
+    .phone__top-header__block{
+        display: none;
+    }    
 }
