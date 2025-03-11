@@ -1,0 +1,145 @@
+.section__header {
+    background-image: url('../img/index/header/cover.png');
+    background-size: cover; /* Зображення займає весь елемент */
+    background-repeat: no-repeat; /* Зображення не повторюється */
+    background-position: left center;
+}
+.section__header__block{
+    width: 50%;
+}
+.section__header__block__slogan{
+    color: rgb(39, 39, 39);
+    font-size: 100px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 100px 40px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: -2px;
+    transform: scaleX(-1);
+    transform: scaleY(1.2);
+    line-height: 1; 
+}
+.section__header__block__text{
+    color: rgb(77, 77, 77);
+    padding: 0px 40px;
+    font-size: 35px;
+    font-family: Nunito, sans-serif;
+}
+#section__header__block__bottom-block__button{
+    background-color: rgb(28, 76, 151);
+    color: white;
+    border-radius: 10px;
+    height: 70px;
+    width: 220px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: rgb(39, 39, 39);;
+    }
+}
+.section__header__block__bottom-block a{
+    color: rgb(39, 39, 39);
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Nunito, sans-serif;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.section__header__block__bottom-block{
+    padding: 40px 40px;
+    display: flex; /* Використовуємо flexbox */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.section__header__block__bottom-block a {
+    display: flex; /* Робимо, щоб картинка і текст йшли в один ряд */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    gap: 8px; /* Відстань між картинкою і текстом */
+}
+.button__play{
+    width: 40px;
+    height: 40px;
+}
+
+
+@media (max-width: 1290px) {
+    .section__header__block__slogan{    
+        font-size: 80px;
+    }
+    .section__header__block{
+        width: 60%;
+    }
+}
+
+@media (max-width: 970px) {
+    .section__header__block{
+        width: 100%;
+    }
+}
+@media (max-width: 652px) {
+    .section__header__block__slogan{
+        font-size: 60px;
+    }
+}
+@media (max-width: 453px) {
+    .section__header__block__slogan{
+        font-size: 40px;
+    }
+    .section__header__block__text{
+        font-size: 20px;
+    }   
+}
+
+.section__bottom__block {
+    padding: 40px 0px;
+    padding-left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; /* Додаємо розтягування по горизонталі */
+    justify-content: space-evenly; /* Рівномірний розподіл елементів */
+}
+
+.section__bottom__block__text {
+    color: rgb(106, 106, 106);
+    font-size: 25px;
+    font-family: Nunito, sans-serif;
+    display: flex; /* Розташовуємо текст і картинку в один рядок */
+    align-items: center; /* Вирівнюємо по вертикалі */
+    gap: 10px; /* Відступ між SVG і текстом */
+}
+
+.svg__img {
+    height: 30px;
+    width: 30px;
+    color: rgb(106, 106, 106);
+}
+.stick__svg {
+    padding: 0px 20px;
+}
+@media (max-width: 1116px) {
+    .section__bottom__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        justify-content: flex-start;
+        gap: 70px;
+    }
+    .section__bottom__block__text {
+        display: flex;
+        align-items: center; /* Вирівнюємо вміст по вертикалі */
+        width: 100%; /* Забезпечуємо, щоб елементи займали всю ширину */
+    }
+
+    .stick__svg {
+        margin-left: auto; /* Переміщає елементи з класом stick__svg вправо */
+    }
+}
