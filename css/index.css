@@ -1,6 +1,7 @@
 @import url(global.css);
 @import url(header.css);
 @import url(section_header.css);
+@import url(section_bestseller.css);
 * {
     margin: 0;
     padding: 0;

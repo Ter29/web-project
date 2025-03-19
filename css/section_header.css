@@ -121,9 +121,11 @@
     height: 30px;
     width: 30px;
     color: rgb(106, 106, 106);
+    user-select: none;
 }
 .stick__svg {
     padding: 0px 20px;
+    user-select: none;
 }
 @media (max-width: 1116px) {
     .section__bottom__block {

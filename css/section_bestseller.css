@@ -1,0 +1,78 @@
+.section__bestseller {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+    padding: 20px;
+}
+
+.section__bestseller__block-1,
+.section__bestseller__block-2,
+.section__bestseller__block-3 {
+    width: 100%;
+    min-height: 450px;
+    border-radius: 15px;
+    padding: 110px 0px 0px 60px;
+}
+.section__bestseller__block-1 {
+    background-image: url(../img/index/section__bestseller/banners/banner2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -200px;
+}
+.section__bestseller__block-2 {
+    background-image: url(../img/index/section__bestseller/banners/banner1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0;
+}
+.section__bestseller__block-3 {
+    background-image: url(../img/index/section__bestseller/banners/banner3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#section__bestseller__block__name-of-gadget {
+    color: white;
+}
+.section__bestseller__block__name-of-gadget {
+    color: white;
+    font-size: 50px;
+    font-family: Nunito, sans-serif;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#section__bestseller__block__name-of-gadget-black {
+    color: black;
+}
+
+.section__bestseller__block__p {
+    color: white;
+    font-size: 21px;
+    font-family: Nunito, sans-serif;
+}
+#section__bestseller__block__p {
+    color: rgb(106, 106, 106);
+}
+
+@media (max-width: 1100px) {
+    .section__bestseller {
+        grid-template-columns: repeat(2, 1fr); /* Дві колонки по 1fr */
+    }
+
+    .section__bestseller__block-3 {
+        grid-column: span 2; /* Розтягуємо третій блок на дві колонки */
+    }
+}
+
+@media (max-width: 748px) {
+    .section__bestseller {
+        grid-template-columns: 1fr; /* Одна колонка */
+    }
+
+    .section__bestseller__block-3 {
+        grid-column: span 1; /* Скасовуємо розтягування на дві колонки */
+    }
+}
+
+
