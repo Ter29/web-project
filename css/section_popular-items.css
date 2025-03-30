@@ -1,0 +1,260 @@
+.main {
+    padding-top: 100px;
+}
+
+.main__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main__header__slogan {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-family: "Bebas Neue", sans-serif;
+    transform: scaleX(0.8);
+    padding: 40px;
+    line-height: 60px;
+}
+
+.slash {
+    font-size: 65px;
+    font-weight: 900;
+    color: rgb(28, 76, 151);
+}
+
+.main__header p {
+    color: rgb(106, 106, 106);
+    font-size: 25px;
+}
+
+.main__on-sale {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.gadget-block {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.gadget-block__badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #464C5C;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    z-index: 10;
+    width: 60px;
+}
+
+.gadget-block__img {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.gadget-block__img img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+}
+
+.gadget-block__out-of-stock {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcccc;
+    color: #cc3833;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.gadget-block__title {
+    font-size: 21px;
+    font-weight: 400;
+    margin: 10px 0;
+    color: rgb(19, 19, 19);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.gadget-block__price {
+    font-size: 20px;
+}
+
+.gadget-block__price--old {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 5px;
+}
+
+.gadget-block__price--new {
+    color: #ff8000;
+    font-weight: bold;
+}
+
+.gadget-block__btn {
+    background: rgb(28, 76, 151);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.gadget-block__btn:hover {
+    background: rgb(39, 39, 39);
+}
+
+
+
+
+.blocks-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 20px;
+}
+.blocks-info__block{
+    background-size: cover;
+    width: 49%;
+    height: 410px;
+    border-radius: 25px;
+    padding: 45px;
+}
+.blocks-info__block--left {
+    background-image: url(../img/index/about___delievry/banner.png);
+    
+}
+.blocks-info__block--right {
+    background-image: url(../img/index/about___delievry/banner2.png);
+}
+.blocks-info__block--left__content {
+    width: 70%;
+}
+.blocks-info__block--left__content h2 {
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.blocks-info__block--left__content p:not(.grey-text) {
+    color: #5a5a5a;
+    padding-bottom: 7px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+.grey-text {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px 0;
+    font-weight: 550;
+    color: rgb(77,77,77);
+}
+.blocks-info__block--right {
+    background-image: url(../img/index/about___delievry/banner2.png);
+}
+.blocks-info__block--right__content {
+    width: 70%;
+}
+.blocks-info__block--right__content h2 {
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(235, 235, 235);
+}
+.blocks-info__block--right__content p:not(.white-text) {
+    color: #5a5a5a;
+    padding-bottom: 7px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+.blocks-info__block button {
+    margin: 10px;
+    background-color: #ff8000;
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.colored-text{
+    font-size: 36px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold; 
+}
+
+
+/* --- Адаптивність --- */
+@media (max-width: 1320px) {
+    .main__on-sale {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Центруємо 9-й і 10-й елемент у останньому ряді */
+    .gadget-block:nth-child(9),
+    .gadget-block:nth-child(10) {
+        grid-column: span 2;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .main__on-sale {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gadget-block:nth-child(9) {
+        grid-column: unset;
+        justify-self: unset;
+    }
+    /* Центруємо 10-й елемент у останньому ряді */
+    .gadget-block:nth-child(10) {
+        grid-column: span 3;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main__on-sale {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Усуваємо зміни, щоб товар виглядав стандартно */
+    .gadget-block:nth-child(10) {
+        grid-column: unset;
+    }
+}
+
+@media (max-width: 576px) {
+    .main__on-sale {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* Зменшуємо заголовок для кращого вигляду */
+    .main__header__slogan {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}

@@ -74,5 +74,11 @@
         grid-column: span 1; /* Скасовуємо розтягування на дві колонки */
     }
 }
+@media (max-width: 380px) {
+    .section__bestseller__block__name-of-gadget {
+        font-size: 30px; /* Зменшуємо розмір шрифту для заголовка */
+    }
+}
+
 
 

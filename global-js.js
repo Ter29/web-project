@@ -1,7 +1,5 @@
 function init() {
-    import("./script.js").then(module => {
-        module.initBurgerMenu(); // Викликаємо функцію після імпорту
-    }).catch(err => console.error("Помилка імпорту:", err));
+    import("./script.js");
 }
 
 const totalPartials = document.querySelectorAll(
@@ -13,3 +11,4 @@ document.body.addEventListener("htmx:afterOnLoad", () => {
     loadedPartialsCount++;
     if (loadedPartialsCount === totalPartials) init();
 });
+

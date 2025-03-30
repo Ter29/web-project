@@ -2,22 +2,22 @@
     background-color: #1c4c97;
     display: flex;
     width: 100%;
-    height: 65px;
+    height: 45.5px; /* 65px * 0.7 */
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 7px; /* 10px * 0.7 */
     flex-wrap: wrap; 
     overflow: hidden; 
 }
 .top__nav {
-    width: 50%;
-    min-width: 895px; 
+    width: 35%; /* 50% * 0.7 */
+    min-width: 626.5px; /* 895px * 0.7 */
     flex-grow: 0.2;
 }
 .top__nav__list {
     list-style: none;
     display: flex;
-    gap: 1%;
+    gap: 0.7%; /* 1% * 0.7 */
     padding: 0;
     margin: 0;
     align-items: center;
@@ -27,8 +27,8 @@
 .top__nav__item a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-size: 24px;
-    padding: 10px 15px;
+    font-size: 16.8px; /* 24px * 0.7 */
+    padding: 7px 10.5px; /* 10px * 0.7, 15px * 0.7 */
     transition: color 0.3s ease;
     white-space: nowrap;
     font-weight: bold;
@@ -39,52 +39,52 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 14px; /* 20px * 0.7 */
     flex-shrink: 0; 
 }
-.top__icons a{
+.top__icons a {
     opacity: 1;
     transition: opacity 0.3s ease;
-    &:hover{
+    &:hover {
         opacity: 0.7;
     } 
 }
-.x-icon{
-    width: 30px;
-    height: 30px;
+.x-icon {
+    width: 21px; /* 30px * 0.7 */
+    height: 21px; /* 30px * 0.7 */
     filter: invert(1);
 }
 
 .top-header {
     width: 100%;
-    height: 120px;
+    height: 84px; /* 120px * 0.7 */
     background-color: rgb(39, 39, 39);
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 0 20px;
+    padding: 0 14px; /* 20px * 0.7 */
 }
 
 /* Логотип */
 .top-header__block--logo {
-    min-width: 90px;
-    width: 10%;
+    min-width: 63px; /* 90px * 0.7 */
+    width: 7%; /* 10% * 0.7 */
 }
 
 .logo__img {
-    width: 100px;
-    height: 70px;
+    width: 70px; /* 100px * 0.7 */
+    height: 49px; /* 70px * 0.7 */
 }
 
 /* Контактний блок */
 .top-header__block--contacts {
-    min-width: 260px;
-    width: 30%;
+    min-width: 182px; /* 260px * 0.7 */
+    width: 21%; /* 30% * 0.7 */
     text-align: center;
 }
 
 .top-header__text {
-    font-size: 20px;
+    font-size: 14px; /* 20px * 0.7 */
     color: rgb(218, 218, 218);
 }
 
@@ -95,13 +95,13 @@
 
 /* Навігація */
 .top-header__block--nav {
-    width: 60%;
+    width: 42%; /* 60% * 0.7 */
 }
 
 .nav__list {
     list-style: none;
     display: flex;
-    gap: 1%;
+    gap: 0.7%; /* 1% * 0.7 */
     padding: 0;
     margin: 0;
     align-items: center;
@@ -111,8 +111,8 @@
 .nav__item a {
     text-decoration: underline;
     color: rgb(187, 187, 187);
-    font-size: 24px;
-    padding: 10px 15px;
+    font-size: 16.8px; /* 24px * 0.7 */
+    padding: 7px 10.5px; /* 10px * 0.7, 15px * 0.7 */
     transition: color 0.3s ease;
     white-space: nowrap;
     font-weight: bold;
