@@ -57,7 +57,7 @@
     font-size: 12px;
     border-radius: 5px;
     z-index: 10;
-    width: 60px;
+    width: auto;
 }
 
 .gadget-block__img {
@@ -125,28 +125,28 @@
 }
 
 
-
-
 .blocks-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
     padding: 20px;
+    gap: 20px;
 }
 .blocks-info__block{
     background-size: cover;
     width: 49%;
-    height: 410px;
     border-radius: 25px;
     padding: 45px;
+    flex: 1;
 }
 .blocks-info__block--left {
     background-image: url(../img/index/about___delievry/banner.png);
-    
+    height: auto;
 }
 .blocks-info__block--right {
     background-image: url(../img/index/about___delievry/banner2.png);
+    height: 100%;
 }
 .blocks-info__block--left__content {
     width: 70%;
@@ -181,13 +181,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     color: rgb(235, 235, 235);
-}
-.blocks-info__block--right__content p:not(.white-text) {
-    color: #5a5a5a;
-    padding-bottom: 7px;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: 400;
+    padding-bottom: 20px;
 }
 .blocks-info__block button {
     margin: 10px;
@@ -199,12 +193,77 @@
     color: white;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.4s ease;
+    &:hover {
+        background-color: rgb(39, 39, 39);
+    }
 }
+.about-delivery-btn {
+    margin: 10px;
+    background-color: #ff8000;
+    border: none;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+
+}
+.about-delivery-btn:hover {
+    background-color: rgb(224, 224, 224) !important; /* Hover background color */
+    color: rgb(39, 39, 39);
+}
+
 .colored-text{
-    font-size: 36px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold; 
+    font-size: 26px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px 0;
+    font-weight: bold;
+    color: rgb(28, 76, 151);
 }
+.colored-text__other{
+    color: white;
+    font-size: 22px;
+    text-decoration: line-through;
+    font-weight: 400;
+}
+.block__shop-now{
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('/img/index/shop__now/cta.png');
+    background-attachment: fixed; /* Закріплює фон */
+    background-size: cover; /* Фон буде покривати весь екран */
+    background-position: center; /* Центрує фон */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block__shop-now__content {
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.block__shop-now-content__h2{
+    font-size: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    transform: scaleY(1.2);
+    padding-bottom: 40px;
+}
+.block__shop-now__content p {
+    color: rgb(201, 201, 201);
+    padding: 40px 0;
+    font-size: 24px;
+    text-align: center;
+}
+
 
 
 /* --- Адаптивність --- */
@@ -234,6 +293,9 @@
         grid-column: span 3;
         justify-self: center;
     }
+    .block__shop-now-content__h2{
+        font-size: 60px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -245,8 +307,19 @@
     .gadget-block:nth-child(10) {
         grid-column: unset;
     }
+    .block__shop-now-content__h2{
+        font-size: 40px;
+    }
+    .block__shop-now__content p {
+        font-size: 18px;
+    }
 }
 
+@media (max-width: 450px) {
+    .block__shop-now-content__h2{
+        font-size: 25px;
+    }
+}
 @media (max-width: 576px) {
     .main__on-sale {
         grid-template-columns: repeat(1, 1fr);
@@ -258,3 +331,15 @@
         line-height: 50px;
     }
 }
+@media (max-width: 773px) {
+    .blocks-info {
+        display: flex;
+        flex-direction: column; /* Розташування блоків вертикально */
+        gap: 20px; /* Відстань між блоками */
+    }
+    
+    .blocks-info__block {
+        width: 100%; /* Блоки займають всю ширину контейнера */
+    }
+}
+
