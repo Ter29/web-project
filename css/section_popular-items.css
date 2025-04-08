@@ -230,7 +230,7 @@
     font-weight: 400;
 }
 .block__shop-now{
-    background: radial-gradient(circle, rgba(46, 46, 46, 0.4), rgba(24, 24, 24, 0.8)), url('/img/index/shop__now/cta.png');
+    background: radial-gradient(circle, rgba(46, 46, 46, 0.4), rgba(24, 24, 24, 0.8)), url('../img/index/shop__now/cta.png');
     background-attachment: fixed; /* Закріплює фон */
     background-size: cover; /* Фон буде покривати весь екран */
     background-position: center; /* Центрує фон */
@@ -278,7 +278,7 @@
     max-height: 460px;
     border-radius: 15px;
     padding: 30px;
-    background-image: url(/img/index/section__bestseller2/banner-mouse.png);
+    background-image: url(../img/index/section__bestseller2/banner-mouse.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -316,7 +316,7 @@
     max-height: 460px;
     border-radius: 15px;
     padding: 20px;
-    background-image: url(/img/index/section__bestseller2/banner1.png);
+    background-image: url(../img/index/section__bestseller2/banner1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: calc(100% - 40px) center;
@@ -335,7 +335,7 @@
     max-height: 460px;
     border-radius: 15px;
     padding: 20px;
-    background-image: url(/img/index/section__bestseller2/banner-wide.png);
+    background-image: url(../img/index/section__bestseller2/banner-wide.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
