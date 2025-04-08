@@ -1,5 +1,6 @@
 function init() {
     import("./script.js");
+    import("./timer.js");
 }
 
 const totalPartials = document.querySelectorAll(

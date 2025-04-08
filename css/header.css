@@ -5,7 +5,7 @@
     height: 45.5px; /* 65px * 0.7 */
     align-items: center;
     justify-content: space-between;
-    padding: 0 7px; /* 10px * 0.7 */
+    padding: 0 20px; /* 10px * 0.7 */
     flex-wrap: wrap; 
     overflow: hidden; 
 }
@@ -17,11 +17,10 @@
 .top__nav__list {
     list-style: none;
     display: flex;
-    gap: 0.7%; /* 1% * 0.7 */
     padding: 0;
     margin: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .top__nav__item a {
@@ -32,6 +31,7 @@
     transition: color 0.3s ease;
     white-space: nowrap;
     font-weight: bold;
+    
 }
 
 .top__icons {
@@ -62,7 +62,7 @@
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    padding: 0 14px; /* 20px * 0.7 */
+    padding: 0 20px; /* 20px * 0.7 */
 }
 
 /* Логотип */
@@ -95,17 +95,16 @@
 
 /* Навігація */
 .top-header__block--nav {
-    width: 42%; /* 60% * 0.7 */
+    width: 50%; /* 60% * 0.7 */
 }
 
 .nav__list {
     list-style: none;
     display: flex;
-    gap: 0.7%; /* 1% * 0.7 */
     padding: 0;
     margin: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .nav__item a {

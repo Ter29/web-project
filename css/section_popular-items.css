@@ -1,4 +1,4 @@
-.main {
+ .main {
     padding-top: 100px;
 }
 
@@ -230,11 +230,11 @@
     font-weight: 400;
 }
 .block__shop-now{
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('/img/index/shop__now/cta.png');
+    background: radial-gradient(circle, rgba(46, 46, 46, 0.4), rgba(24, 24, 24, 0.8)), url('/img/index/shop__now/cta.png');
     background-attachment: fixed; /* Закріплює фон */
     background-size: cover; /* Фон буде покривати весь екран */
     background-position: center; /* Центрує фон */
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -264,7 +264,102 @@
     text-align: center;
 }
 
+.section__bestseller-2 {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+}
 
+.section__bestseller-2__block-1 {
+    width: 25%;
+    min-width: 350px;
+    min-height: 350px;
+    max-height: 460px;
+    border-radius: 15px;
+    padding: 30px;
+    background-image: url(/img/index/section__bestseller2/banner-mouse.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+  
+.countdown__item {
+    text-align: center;
+    border: 2px solid #333333bd;
+    border-radius: 0.5rem;
+    min-width: 70px;
+}
+  
+.countdown__number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    display: block;
+}
+  
+.countdown__label {
+    font-size: 0.9rem;
+    color: #444;
+}
+  
+.section__bestseller-2__block-2 {
+    width: 40%;
+    min-height: 350px;
+    max-height: 460px;
+    border-radius: 15px;
+    padding: 20px;
+    background-image: url(/img/index/section__bestseller2/banner1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 40px) center;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+}
+
+.section__bestseller-2__block-2__content{
+   width: 50%; 
+}
+.section__bestseller-2__block-3 {
+    width: 35%;
+    min-height: 350px;
+    max-height: 460px;
+    border-radius: 15px;
+    padding: 20px;
+    background-image: url(/img/index/section__bestseller2/banner-wide.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.section__bestseller-2__block__name-of-gadget {
+    color: rgb(36, 33, 33);
+    font-size: 36px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.section__bestseller-2__block__p {
+    color: rgb(89, 89, 89);
+    font-size: 16px;
+    font-family: Nunito, sans-serif;
+    text-align: center;
+}
+.bestseller-blue {
+    color: rgba(35, 71, 177, 0.863);
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 12px;
+}
 
 /* --- Адаптивність --- */
 @media (max-width: 1320px) {
@@ -342,4 +437,76 @@
         width: 100%; /* Блоки займають всю ширину контейнера */
     }
 }
+@media (max-width: 1208px) {
+    .section__bestseller-2 {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .section__bestseller-2__block-1 {
+        width: 100%;
+        min-height: 350px;
+        max-height: 460px;
+        border-radius: 15px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    .section__bestseller-2__block-2 {
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+    }
+    .section__bestseller-2__block-2__content {
+        width: 70%;
+    }
+    .section__bestseller-2__block-3{
+        width: calc(50% - 10px);
+        box-sizing: border-box;
+    }
+    .section__bestseller-2__block__name-of-gadget {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 788px) {
+    .section__bestseller-2 {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+    .section__bestseller-2__block-1 {
+        width: 100%;
+        min-height: 350px;
+        max-height: 460px;
+        border-radius: 15px;
+        padding: 30px;
+        box-sizing: border-box;
+        min-width: 280px;
+    }
+    .section__bestseller-2__block-2 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .section__bestseller-2__block-2__content {
+        width: 70%;
+        align-items: right;
+        justify-items: right;
+        align-self: center;
+    }
+    .section__bestseller-2__block-3{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .section__bestseller-2__block__name-of-gadget {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .countdown__item {
+        min-width: 50px;
+    }
+}
+
 
